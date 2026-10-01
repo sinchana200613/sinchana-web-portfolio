@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinchana N | CSIT Student Portfolio</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Personal portfolio of Sinchana N, a First-Year Computer Science and Information Technology (CSIT) student. Showcasing academic achievements, programming skills in C and Python, and technical projects.">
+    <meta name="keywords"
+        content="Sinchana N, Portfolio, CSIT, Computer Science, Student, Software Developer, C programming, Python, web development">
+    <meta name="author" content="Sinchana N">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sinchana N | CSIT Student Portfolio">
+    <meta property="og:description"
+        content="Explore the portfolio of Sinchana N, CSIT student showing academic projects, technical skills, and career goals.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-theme">
+    <!-- Page Loader -->
+    <div id="loader" class="loader-container">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="navbar" id="navbar" aria-label="Main navigation">
+            <a href="#home" class="logo" id="nav-logo">
+                <span class="gradient-text">Sinchana</span><span class="dot">.</span>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li class="nav-item"><a href="#resume" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark mode">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+
+                <button id="mobile-toggle" class="mobile-toggle-btn" aria-label="Open mobile menu"
+                    aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section section-padding">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge fade-in">Welcome to my space</span>
+                    <h1 class="hero-title fade-in">
+                        Hi, I'm <span class="gradient-text">Sinchana N</span>
+                    </h1>
+                    <h2 class="hero-subtitle fade-in">
+                        I am a <span id="typed-text" class="typed-text"></span><span class="cursor">&nbsp;</span>
+                    </h2>
+                    <p class="hero-description fade-in">
+                        A passionate First-Year CSIT student seeking to build innovative solutions. Fascinated by
+                        technology, programming, and continuous learning, with active aspirations in Software
+                        Development, Artificial Intelligence, and Cybersecurity.
+                    </p>
+                    <div class="hero-ctas fade-in">
+                        <a href="#projects" class="btn btn-primary" id="hero-btn-projects">
+                            <span>View Projects</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline" id="hero-btn-contact">
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper fade-in">
+                    <div class="image-bg-glow"></div>
+                    <div class="image-border-animate">
+                        <div class="image-inner">
+                            <img src="assets/profile_avatar.png" alt="Sinchana N Profile Avatar" class="profile-img"
+                                id="profile-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down" id="scroll-down" aria-label="Scroll down to About section">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="arrow-down"></span>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="subtitle">About Me</span>
+                    <h2 class="section-title">Get to Know <span class="gradient-text">Myself</span></h2>
+                    <div class="header-bar"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-info">
+                        <h3>My Journey & Goals</h3>
+                        <p class="about-text">
+                            I am currently a first-year undergraduate pursuing a degree in <strong>Computer Science and
+                                Information Technology (CSIT)</strong>. My educational journey has equipped me with
+                            foundational programming skills, and my curiosity drives me to study software design, data
+                            systems, and defensive security frameworks.
+                        </p>
+                        <p class="about-text">
+                            My long-term aspirations center around <strong>Software Development, Artificial
+                                Intelligence, and Cybersecurity</strong>. I actively seek internships, collaborative
+                            hackathons, and opportunities to build systems that make a real difference.
+                        </p>
+                        <div class="interests-container">
+                            <h4>Personal Interests & Hobbies</h4>
+                            <div class="interests-grid">
+                                <div class="interest-tag"><i class="fa-solid fa-code"></i> Coding Challenges</div>
+                                <div class="interest-tag"><i class="fa-solid fa-book-open"></i> Reading Tech Blogs</div>
+                                <div class="interest-tag"><i class="fa-solid fa-puzzle-piece"></i> Logic Puzzles</div>
+                                <div class="interest-tag"><i class="fa-solid fa-gamepad"></i> Gaming</div>
+                                <div class="interest-tag"><i class="fa-solid fa-music"></i> Music</div>
+                                <div class="interest-tag"><i class="fa-solid fa-pen-nib"></i> Creative Writing</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <h4>Education Level</h4>
+                            <p>First-Year CSIT Student</p>
+                            <span class="card-hint">Pursuing B.E. / B.Tech</span>
+                        </div>
+                        <div class="about-card">
+                            <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                            <h4>Interest Areas</h4>
+                            <p>Software Dev, AI, CyberSec</p>
+                            <span class="card-hint">Exploratory Stage</span>
+                        </div>
+                        <div class="about-card">
+                            <div class="card-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+                            <h4>Learning Journey</h4>
+                            <p>C, Python, Java & Web Dev</p>
+                            <span class="card-hint">Hands-on practice daily</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="subtitle">Academic Journey</span>
+                    <h2 class="section-title">Education <span class="gradient-text">Details</span></h2>
+                    <div class="header-bar"></div>
+                </div>
+
+                <div class="education-container">
+                    <div class="timeline">
+                        <!-- Timeline Item 1: Current College -->
+                        <div class="timeline-item left">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2025 - Present</span>
+                                <h3>Bachelor of Technology in CSIT</h3>
+                                <h4>Current College & CSIT Program</h4>
+                                <p class="timeline-desc">
+                                    Enrolled as a first-year student. Actively learning computing essentials,
+                                    engineering physics/math, logic circuits, and algorithmic problem solving. Maintains
+                                    a high academic standing.
+                                </p>
+                                <div class="semester-info">
+                                    <span class="badge-sem"><i class="fa-solid fa-calendar-days"></i> Current: Semester
+                                        2</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 2: Pre-University / Senior Secondary -->
+                        <div class="timeline-item right">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2023 - 2025</span>
+                                <h3>Pre-University College (PCMC)</h3>
+                                <h4>Physics, Chemistry, Mathematics, Computer Science</h4>
+                                <p class="timeline-desc">
+                                    Completed Higher Secondary/Pre-University education with a focus on core sciences
+                                    and computing basics. Developed fundamental skills in logical thinking and
+                                    structured programming (C++).
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 3: Secondary School -->
+                        <div class="timeline-item left">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Completed 2023</span>
+                                <h3>High School (SSLC / CBSE)</h3>
+                                <h4>Science & Mathematics Focus</h4>
+                                <p class="timeline-desc">
+                                    Graduated with high grades. Represented school in state-level science exhibitions,
+                                    math quizzes, and public speaking contests.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subjects Studied Grid -->
+                <div class="subjects-container">
+                    <h3>Relevant Subjects Studied</h3>
+                    <div class="subjects-grid">
+                        <div class="subject-card">
+                            <div class="subj-icon"><i class="fa-solid fa-code"></i></div>
+                            <h4>Programming in C</h4>
+                            <p>Pointers, structs, file handling, memory management, and structured program layout.</p>
+                        </div>
+                        <div class="subject-card">
+                            <div class="subj-icon"><i class="fa-solid fa-sitemap"></i></div>
+                            <h4>Data Structures</h4>
+                            <p>Lists, stacks, queues, trees, graphs, sorting, searching algorithms, and complexity
+                                analyses.</p>
+                        </div>
+                        <div class="subject-card">
+                            <div class="subj-icon"><i class="fa-solid fa-microchip"></i></div>
+                            <h4>Digital Electronics</h4>
+                            <p>Boolean algebra, logic gates, flip-flops, combinational/sequential logic circuit designs.
+                            </p>
+                        </div>
+                        <div class="subject-card">
+                            <div class="subj-icon"><i class="fa-solid fa-calculator"></i></div>
+                            <h4>Engineering Mathematics</h4>
+                            <p>Calculus, linear algebra, differential equations, discrete structures, and matrix
+                                analysis.</p>
+                        </div>
+                        <div class="subject-card">
+                            <div class="subj-icon"><i class="fa-brands fa-python"></i></div>
+                            <h4>Python Programming</h4>
+                            <p>OOPS principles, basic scientific modules, syntax automation, and foundational scripting.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="subtitle">My Arsenal</span>
+                    <h2 class="section-title">Technical & Soft <span class="gradient-text">Skills</span></h2>
+                    <div class="header-bar"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Technical Skills -->
+                    <div class="skills-box">
+                        <h3>Technical Proficiency</h3>
+
+                        <div class="skills-list">
+                            <!-- Skill 1 -->
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Programming in C</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 2 -->
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Python Programming</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 3 -->
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Java Programming (Learning)</span>
+                                    <span>40%</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 4 -->
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Web (HTML5, CSS3, JavaScript)</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 5 -->
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Tools (Git, GitHub, VS Code)</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="skills-box">
+                        <h3>Soft Skills</h3>
+                        <p class="soft-skills-desc">
+                            Critical competencies that enable collaborative success, structured problem solving, and
+                            effective personal management.
+                        </p>
+
+                        <div class="soft-skills-grid">
+                            <div class="soft-skill-card">
+                                <div class="soft-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                                <h4>Problem Solving</h4>
+                                <p>Breaking complex problems down into modular solutions</p>
+                            </div>
+                            <div class="soft-skill-card">
+                                <div class="soft-icon"><i class="fa-solid fa-users"></i></div>
+                                <h4>Teamwork</h4>
+                                <p>Collaborative spirit, division of tasks, and version control sync</p>
+                            </div>
+                            <div class="soft-skill-card">
+                                <div class="soft-icon"><i class="fa-solid fa-comments"></i></div>
+                                <h4>Communication</h4>
+                                <p>Explaining analytical systems clearly to tech/non-tech peers</p>
+                            </div>
+                            <div class="soft-skill-card">
+                                <div class="soft-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                                <h4>Critical Thinking</h4>
+                                <p>Examining code quality, logic errors, and security patterns</p>
+                            </div>
+                            <div class="soft-skill-card">
+                                <div class="soft-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+                                <h4>Time Management</h4>
+                                <p>Balancing academic course loads with personal building projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="subtitle">Portfolio Showpieces</span>
+                    <h2 class="section-title">Selected <span class="gradient-text">Projects</span></h2>
+                    <div class="header-bar"></div>
+                </div>
+
+                <!-- Project Filtering Controls -->
+                <div class="filter-controls" id="filter-controls">
+                    <button class="filter-btn active" data-filter="all" id="btn-filter-all">All Projects</button>
+                    <button class="filter-btn" data-filter="c-lang" id="btn-filter-c">C/C++ Projects</button>
+                    <button class="filter-btn" data-filter="python-lang" id="btn-filter-python">Python/ML</button>
+                    <button class="filter-btn" data-filter="web-tech" id="btn-filter-web">Web Dev</button>
+                </div>
+
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Project 1: 2D Graphics Editor -->
+                    <article class="project-card" data-category="c-lang" id="project-2d-graphics">
+                        <div class="project-image">
+                            <img src="assets/graphics_project.png" alt="2D Graphics Editor GUI Preview">
+                            <div class="project-overlay">
+                                <a href="https://github.com/sinchana-n/2d-graphics-editor-c" target="_blank"
+                                    rel="noopener noreferrer" class="project-link"
+                                    aria-label="View source code on GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Programming in C</span>
+                            <h3>2D Graphics Editor in C</h3>
+                            <p class="project-desc">
+                                A lightweight, visual program that lets users draw, manipulate, and export 2D geometric
+                                designs. Supports translations, scaling, rotations, and custom colors.
+                            </p>
+                            <ul class="project-features">
+                                <li><i class="fa-solid fa-circle-check"></i> Basic shapes (line, rect, oval, poly)</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Scaling and dynamic rotations</li>
+                                <li><i class="fa-solid fa-circle-check"></i> File saving and loading routines</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span>C Standard Libs</span>
+                                <span>Graphics.h / SDL</span>
+                                <span>Math Libraries</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/sinchana-n/2d-graphics-editor-c" class="project-action-btn"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <span>GitHub Repo</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Heart Disease Prediction -->
+                    <article class="project-card" data-category="python-lang" id="project-heart-prediction">
+                        <div class="project-image">
+                            <img src="assets/heart_project.png" alt="Heart Disease Prediction Graphs Dashboard">
+                            <div class="project-overlay">
+                                <a href="https://github.com/sinchana-n/heart-disease-prediction-ml" target="_blank"
+                                    rel="noopener noreferrer" class="project-link"
+                                    aria-label="View source code on GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Python & Machine Learning</span>
+                            <h3>Heart Disease Prediction</h3>
+                            <p class="project-desc">
+                                A machine learning pipeline developed to analyze clinical attributes and predict the
+                                probability of coronary heart diseases. Reaches 89% validation accuracy.
+                            </p>
+                            <ul class="project-features">
+                                <li><i class="fa-solid fa-circle-check"></i> Logistic Regression & Decision Trees</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Statistical outlier filtering</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Feature weight visualization</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Pandas & Scikit-Learn</span>
+                                <span>Matplotlib</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/sinchana-n/heart-disease-prediction-ml"
+                                    class="project-action-btn" target="_blank" rel="noopener noreferrer">
+                                    <span>GitHub Repo</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Mini Programming Projects -->
+                    <article class="project-card" data-category="web-tech c-lang python-lang"
+                        id="project-mini-projects">
+                        <div class="project-image">
+                            <img src="assets/mini_projects.png" alt="Mini projects coding cards collage">
+                            <div class="project-overlay">
+                                <a href="https://github.com/sinchana-n/mini-programming-projects" target="_blank"
+                                    rel="noopener noreferrer" class="project-link"
+                                    aria-label="View source code on GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Academic & Practice Code</span>
+                            <h3>Mini Programming Projects</h3>
+                            <p class="project-desc">
+                                A collection of modular practice scripts and small console utilities built to explore
+                                data structures, sorting algorithms, and standard UI integrations.
+                            </p>
+                            <ul class="project-features">
+                                <li><i class="fa-solid fa-circle-check"></i> Library Management Console Utility</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Task Scheduler & CLI Calendar</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Simple Javascript interactive math quiz
+                                </li>
+                            </ul>
+                            <div class="project-tech">
+                                <span>C / Data Structures</span>
+                                <span>Python Scripts</span>
+                                <span>HTML / CSS / JS</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/sinchana-n/mini-programming-projects"
+                                    class="project-action-btn" target="_blank" rel="noopener noreferrer">
+                                    <span>View Collection</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements & Certifications Section -->
+        <section id="achievements" class="achievements-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="subtitle">Milestones</span>
+                    <h2 class="section-title">Achievements & <span class="gradient-text">Certifications</span></h2>
+                    <div class="header-bar"></div>
+                </div>
+
+                <div class="achievements-grid">
+                    <!-- Achievement 1 -->
+                    <div class="achievement-card">
+                        <div class="ach-icon"><i class="fa-solid fa-award"></i></div>
+                        <span class="ach-category">Academic Honor</span>
+                        <h4>Class Performance Recognition</h4>
+                        <p>Awarded for achieving top-tier academic marks in the first-semester engineering exams,
+                            particularly in Programming in C and Digital Electronics modules.</p>
+                    </div>
+
+                    <!-- Achievement 2 -->
+                    <div class="achievement-card">
+                        <div class="ach-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <span class="ach-category">Online Course</span>
+                        <h4>Python Programming Certification</h4>
+                        <p>Completed an intensive certification program on python structures, automation scripts, and
+                            object-oriented programming concepts (Coursera/Udemy).</p>
+                    </div>
+
+                    <!-- Achievement 3 -->
+                    <div class="achievement-card">
+                        <div class="ach-icon"><i class="fa-solid fa-people-group"></i></div>
+                        <span class="ach-category">Workshop</span>
+                        <h4>Intro to Cybersecurity & Networks</h4>
+                        <p>Attended a 3-day boot camp covering basic routing, firewalls, network packet sniffing, and
+                            secure hashing algorithms for beginner cyber-specialists.</p>
+                    </div>
+
+                    <!-- Achievement 4 -->
+                    <div class="achievement-card">
+                        <div class="ach-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <span class="ach-category">Hackathon / Event</span>
+                        <h4>College Technical Event Runner-Up</h4>
+                        <p>Placed 2nd in the 'Speed Coding' contest during the annual departmental festival, writing
+                            logic programs in C against a 30-minute timer limit.</p>
+                    </div>
+
+                    <!-- Achievement 5 -->
+                    <div class="achievement-card">
+                        <div class="ach-icon"><i class="fa-solid fa-certificate"></i></div>
+                        <span class="ach-category">Participation</span>
+                        <h4>Git & GitHub Version Sync Workshop</h4>
+                        <p>Received a participation credential for mastering command line Git commands, code merging
+                            strategies, branch setups, and team organization flows.</p>
+                    </div>
+
+                    <!-- Achievement 6 -->
+                    <div class="achievement-card">
+                        <div class="ach-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                        <span class="ach-category">Web Seminar</span>
+                        <h4>AI Foundations & Neural Networks</h4>
+                        <p>Participated in an introductory webinar detailing classification mechanisms, regression
+                            frameworks, and the rise of LLMs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="subtitle">Document Summary</span>
+                    <h2 class="section-title">Professional <span class="gradient-text">Resume</span></h2>
+                    <div class="header-bar"></div>
+                </div>
+
+                <div class="resume-wrapper">
+                    <div class="resume-actions-top">
+                        <a href="resume.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+                            id="btn-download-resume">
+                            <i class="fa-solid fa-download"></i> <span>View & Print Resume</span>
+                        </a>
+                    </div>
+
+                    <!-- Beautiful interactive preview of the resume inside a container -->
+                    <div class="resume-preview-container" id="resume-preview-container">
+                        <div class="resume-preview-header">
+                            <div class="resume-circles">
+                                <span class="circle red"></span>
+                                <span class="circle yellow"></span>
+                                <span class="circle green"></span>
+                            </div>
+                            <span class="resume-title-bar">sinchana_n_resume.pdf</span>
+                        </div>
+
+                        <div class="resume-sheet">
+                            <div class="resume-sheet-header">
+                                <div>
+                                    <h2>Sinchana N.</h2>
+                                    <p class="role-subtitle">First-Year CSIT Student | Aspiring Developer</p>
+                                </div>
+                                <div class="resume-sheet-contact">
+                                    <p><i class="fa-solid fa-envelope"></i> sinchana.n@email.com</p>
+                                    <p><i class="fa-solid fa-location-dot"></i> Karnataka, India</p>
+                                    <p><i class="fa-brands fa-github"></i> github.com/sinchana-n</p>
+                                </div>
+                            </div>
+
+                            <hr class="resume-divider">
+
+                            <div class="resume-sheet-grid">
+                                <div class="resume-left-col">
+                                    <div class="resume-sheet-section">
+                                        <h3><i class="fa-solid fa-graduation-cap"></i> EDUCATION</h3>
+                                        <div class="resume-entry">
+                                            <h4>B.Tech in Computer Science & IT</h4>
+                                            <p class="entry-sub">Current College (2025 - 2029)</p>
+                                            <p class="entry-desc">Sem 2. Deepening skills in C, data layout structures,
+                                                and math foundations.</p>
+                                        </div>
+                                        <div class="resume-entry">
+                                            <h4>Pre-University (PCMC)</h4>
+                                            <p class="entry-sub">Pre-University College (2023 - 2025)</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="resume-sheet-section">
+                                        <h3><i class="fa-solid fa-gears"></i> TECHNICAL SKILLS</h3>
+                                        <p><strong>Languages:</strong> C, Python, Java (Learning)</p>
+                                        <p><strong>Web Tech:</strong> HTML5, CSS3, JavaScript</p>
+                                        <p><strong>Tools:</strong> Git, GitHub, VS Code</p>
+                                    </div>
+                                </div>
+
+                                <div class="resume-right-col">
+                                    <div class="resume-sheet-section">
+                                        <h3><i class="fa-solid fa-laptop-code"></i> PROJECTS</h3>
+                                        <div class="resume-entry">
+                                            <h4>2D Graphics Editor (C Language)</h4>
+                                            <p class="entry-desc">Interactive shape rendering console using standard
+                                                libraries and math rotation matrix formulas.</p>
+                                        </div>
+                                        <div class="resume-entry">
+                                            <h4>Heart Disease Prediction (Python)</h4>
+                                            <p class="entry-desc">Utilized Scikit-Learn libraries to model regression
+                                                trees predicting heart disease flags.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="resume-sheet-section">
+                                        <h3><i class="fa-solid fa-award"></i> ACHIEVEMENTS</h3>
+                                        <ul>
+                                            <li>Class runner-up in speed coding match.</li>
+                                            <li>Python Programming (Honors level certificate).</li>
+                                            <li>Security and Networking certification attendee.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="subtitle">Get In Touch</span>
+                    <h2 class="section-title">Contact <span class="gradient-text">Information</span></h2>
+                    <div class="header-bar"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Cards / Info -->
+                    <div class="contact-info">
+                        <h3>Let's Connect!</h3>
+                        <p class="contact-desc">
+                            Have an interesting project idea, internship opportunity, or just want to chat about tech?
+                            Feel free to drop a message or reach out through my social channels. I'll get back to you as
+                            soon as possible!
+                        </p>
+
+                        <div class="contact-details">
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="detail-text">
+                                    <h4>Email Me</h4>
+                                    <a href="mailto:sinchana.n@email.com">sinchana.n@email.com</a>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="detail-text">
+                                    <h4>Location</h4>
+                                    <span>Karnataka, India</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-circle-check"></i></div>
+                                <div class="detail-text">
+                                    <h4>Open for Internships</h4>
+                                    <span>Software / AI / Security</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/sinchana-n" target="_blank" rel="noopener noreferrer"
+                                class="social-icon" aria-label="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/sinchana-n" target="_blank" rel="noopener noreferrer"
+                                class="social-icon" aria-label="GitHub Profile">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+                                aria-label="Twitter Profile">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a href="mailto:sinchana.n@email.com" class="social-icon" aria-label="Send Email Direct">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <h3>Send a Message</h3>
+                        <form id="contact-form" class="contact-form" autocomplete="on">
+                            <div class="form-group">
+                                <label for="name">Your Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe"
+                                    aria-required="true">
+                                <span class="error-msg" id="name-error">Please enter your name.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com"
+                                    aria-required="true">
+                                <span class="error-msg" id="email-error">Please enter a valid email address.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject <span class="required">*</span></label>
+                                <input type="text" id="subject" name="subject" required
+                                    placeholder="Collaboration Opportunity" aria-required="true">
+                                <span class="error-msg" id="subject-error">Please enter a subject.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message <span class="required">*</span></label>
+                                <textarea id="message" name="message" required
+                                    placeholder="Hi Sinchana, I would love to talk about..." rows="5"
+                                    aria-required="true"></textarea>
+                                <span class="error-msg" id="message-error">Please enter your message.</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100" id="btn-submit-contact">
+                                <span>Send Message</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+
+                            <!-- Form Success / Error Message Alert -->
+                            <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <span class="gradient-text">Sinchana</span><span class="dot">.</span>
+                </a>
+                <p>CSIT student learning to build scalable structures and intelligence pipelines.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact-info">
+                <h4>Get In Touch</h4>
+                <p><i class="fa-solid fa-envelope"></i> sinchana.n@email.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Karnataka, India</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sinchana N. All Rights Reserved. Designed for internships and placements.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+
+</html>

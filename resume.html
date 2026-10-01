@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Sinchana N | CSIT Student</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2b6cb0;
+            --text-dark: #2d3748;
+            --text-muted: #718096;
+            --bg-color: #f7fafc;
+            --border-color: #e2e8f0;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+        
+        .resume-page {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            padding: 40px;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        /* Print/Action buttons top right */
+        .print-btn-bar {
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: none;
+            padding: 10px 18px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        
+        .btn-action:hover {
+            background-color: #1a365d;
+        }
+        
+        .btn-back {
+            background-color: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+        }
+        
+        .btn-back:hover {
+            background-color: var(--border-color);
+            color: var(--text-dark);
+        }
+        
+        /* Resume layout structures */
+        .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
+        
+        .header-title h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+        
+        .header-title p {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            font-weight: 500;
+        }
+        
+        .header-contact {
+            text-align: right;
+            font-size: 13px;
+            color: var(--text-dark);
+        }
+        
+        .header-contact p {
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 6px;
+        }
+        
+        .header-contact a {
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+        
+        .header-contact a:hover {
+            text-decoration: underline;
+        }
+        
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 32px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+        }
+        
+        .section-title i {
+            font-size: 14px;
+        }
+        
+        .resume-section {
+            margin-bottom: 24px;
+        }
+        
+        .entry {
+            margin-bottom: 16px;
+        }
+        
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        
+        .entry-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .entry-sub {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+        
+        .entry-date {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .entry-desc {
+            font-size: 13px;
+            color: #4a5568;
+            margin-top: 4px;
+        }
+        
+        .entry-desc ul {
+            margin-left: 20px;
+            margin-top: 4px;
+        }
+        
+        .entry-desc li {
+            margin-bottom: 3px;
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+        
+        .skill-tag {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        
+        .achievements-list {
+            margin-left: 18px;
+            font-size: 13px;
+            color: #4a5568;
+        }
+        
+        .achievements-list li {
+            margin-bottom: 8px;
+        }
+        
+        /* Print queries */
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+                color: #000000;
+            }
+            
+            .resume-page {
+                box-shadow: none;
+                padding: 0;
+                border-radius: 0;
+                max-width: 100%;
+            }
+            
+            .print-btn-bar {
+                display: none;
+            }
+            
+            .skill-tag {
+                background-color: #ffffff !important;
+                border: 1px solid #cbd5e0 !important;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .resume-header {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .header-contact {
+                text-align: left;
+            }
+            
+            .header-contact p {
+                justify-content: flex-start;
+            }
+            
+            .resume-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-btn-bar">
+        <a href="index.html" class="btn-action btn-back">
+            <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <button class="btn-action" onclick="window.print()">
+            <i class="fa-solid fa-print"></i> Print / Save as PDF
+        </button>
+    </div>
+
+    <div class="resume-page">
+        <!-- Header -->
+        <header class="resume-header">
+            <div class="header-title">
+                <h1>Sinchana N.</h1>
+                <p>First-Year CSIT Undergraduate | Software Developer Aspirant</p>
+            </div>
+            <div class="header-contact">
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:sinchana.n@email.com">sinchana.n@email.com</a></p>
+                <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fa-solid fa-location-dot"></i> Karnataka, India</p>
+                <p><i class="fa-brands fa-github"></i> <a href="https://github.com/sinchana-n" target="_blank">github.com/sinchana-n</a></p>
+                <p><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/sinchana-n" target="_blank">linkedin.com/in/sinchana-n</a></p>
+            </div>
+        </header>
+
+        <div class="resume-grid">
+            <!-- Left Column -->
+            <div class="resume-left-col">
+                <!-- Education Section -->
+                <section class="resume-section">
+                    <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+                    
+                    <div class="entry">
+                        <div class="entry-header">
+                            <span class="entry-title">B.Tech in Computer Science & Information Technology</span>
+                            <span class="entry-date">2025 - Present</span>
+                        </div>
+                        <div class="entry-sub">Engineering College, Karnataka</div>
+                        <div class="entry-desc">
+                            Currently in Semester 2. Focus modules: C Programming, Data Structures, Digital Electronics, Engineering Mathematics.
+                        </div>
+                    </div>
+                    
+                    <div class="entry">
+                        <div class="entry-header">
+                            <span class="entry-title">Pre-University Education (PCMC)</span>
+                            <span class="entry-date">2023 - 2025</span>
+                        </div>
+                        <div class="entry-sub">Senior Secondary College, India</div>
+                        <div class="entry-desc">
+                            Specialized in Physics, Chemistry, Mathematics, and Computer Science.
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Academic Projects Section -->
+                <section class="resume-section">
+                    <h2 class="section-title"><i class="fa-solid fa-laptop-code"></i> Academic Projects</h2>
+                    
+                    <div class="entry">
+                        <div class="entry-header">
+                            <span class="entry-title">2D Graphics Editor in C</span>
+                            <span class="entry-date">2026</span>
+                        </div>
+                        <div class="entry-sub">C Programming, SDL, Graphics Libraries</div>
+                        <div class="entry-desc">
+                            <ul>
+                                <li>Created a console/window application to render lines, rects, and arcs dynamically.</li>
+                                <li>Implemented 2D geometry algorithms (translation matrices, rotations, scaling) manually.</li>
+                                <li>Designed save/load procedures to store canvas configurations on the disk.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="entry-header">
+                            <span class="entry-title">Heart Disease Prediction using Python</span>
+                            <span class="entry-date">2025</span>
+                        </div>
+                        <div class="entry-sub">Python, Scikit-Learn, Pandas, Matplotlib</div>
+                        <div class="entry-desc">
+                            <ul>
+                                <li>Processed and cleaned clinical datasets of 300+ patient entries using Pandas.</li>
+                                <li>Trained classification algorithms achieving 89% accuracy on cross-validation sets.</li>
+                                <li>Generated metric report diagrams depicting precision/recall performance scores.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="resume-right-col">
+                <!-- Skills Section -->
+                <section class="resume-section">
+                    <h2 class="section-title"><i class="fa-solid fa-gears"></i> Core Skills</h2>
+                    
+                    <div class="entry">
+                        <span class="entry-title">Programming Languages</span>
+                        <div class="skills-list">
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java (Learning)</span>
+                        </div>
+                    </div>
+
+                    <div class="entry" style="margin-top: 12px;">
+                        <span class="entry-title">Web Technologies</span>
+                        <div class="skills-list">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="entry" style="margin-top: 12px;">
+                        <span class="entry-title">Tools & Environments</span>
+                        <div class="skills-list">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Windows Command Prompt</span>
+                        </div>
+                    </div>
+
+                    <div class="entry" style="margin-top: 12px;">
+                        <span class="entry-title">Soft Skills</span>
+                        <div class="skills-list">
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">Teamwork</span>
+                            <span class="skill-tag">Time Management</span>
+                            <span class="skill-tag">Critical Thinking</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Achievements Section -->
+                <section class="resume-section">
+                    <h2 class="section-title"><i class="fa-solid fa-award"></i> Highlights</h2>
+                    <ul class="achievements-list">
+                        <li><strong>Class honors:</strong> Top ranker in Programming in C exam.</li>
+                        <li><strong>Speed Coding:</strong> 2nd place winner in annual speed-coding contest.</li>
+                        <li><strong>Certifications:</strong> Python Structures and Automation basics.</li>
+                        <li><strong>Security bootcamp:</strong> Completed networking essentials seminar.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
